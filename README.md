@@ -1,6 +1,6 @@
 # ofxQuadTree
 
-separate quadtree from image/texture
+generate quadtree from image/texture
 
 ![Photo](https://github.com/2bbb/ofxQuadTree/raw/master/ofxQuadTreeImage.png)
 

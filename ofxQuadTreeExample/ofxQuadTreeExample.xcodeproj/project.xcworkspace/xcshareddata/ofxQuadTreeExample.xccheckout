@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>085FFB3D-8AE1-446E-8D21-06B3521B0BE1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ofxQuadTreeExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EEA72EEE7568AB826FE75C201BBD2D2E8A3A6669</key>
+		<string>github.com:2bbb/ofxQuadTree.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ofxQuadTreeExample/ofxQuadTreeExample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EEA72EEE7568AB826FE75C201BBD2D2E8A3A6669</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:2bbb/ofxQuadTree.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EEA72EEE7568AB826FE75C201BBD2D2E8A3A6669</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EEA72EEE7568AB826FE75C201BBD2D2E8A3A6669</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxQuadTree</string>
+		</dict>
+	</array>
+</dict>
+</plist>
