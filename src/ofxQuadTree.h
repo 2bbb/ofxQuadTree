@@ -21,14 +21,22 @@ class ofxQuadTree {
     ofColor c;
     ofxQuadTree **nodes;
     
-    float quadTreeThreashold;
+    float threashold;
     int blockSize;
 public:
     ofxQuadTree()
-    : quadTreeThreashold(24.0f) {}
+    : threashold(24.0f) {}
     
-    inline void setup(float quadTreeThreashold = 24.0f) {
-        this->quadTreeThreashold = quadTreeThreashold;
+    inline void setup(float threashold = 24.0f) {
+        this->threashold = threashold;
+    }
+    
+    inline void setThreashold(float threashold) {
+        this->threashold = threashold;
+    }
+    
+    inline float getThreashold() const {
+        return threashold;
     }
     
     inline void setTexture(ofTexture &tex, int depth) {
@@ -155,7 +163,7 @@ private:
                         dist += calcDistance(nodes[i]->c, nodes[j]->c);
                     }
                 }
-                if(dist / 12.0f < quadTreeThreashold) {
+                if(dist / 12.0f < threashold) {
                     size = 2 * nodes[0]->size;
                     x = nodes[0]->x;
                     y = nodes[0]->y;
