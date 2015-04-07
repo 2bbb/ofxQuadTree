@@ -11,11 +11,12 @@ public:
         bOriginal = false;
         grabber.initGrabber(1280, 720);
         tree.setup();
+        level = 7;
     }
     void update() {
         grabber.update();
         if(grabber.isFrameNew()) {
-            tree.setTexture(grabber.getTextureReference(), 7);
+            tree.setTexture(grabber.getTextureReference(), level);
         }
     }
     void draw() {
@@ -30,6 +31,10 @@ public:
         if(bWire) {
             tree.drawWire(ofColor::white);
         }
+        
+        ofSetColor(ofColor::red);
+        ofDrawBitmapString(string("threashold : ") + ofToString(tree.getThreashold()), 40, 40);
+        ofDrawBitmapString(string("split level : ") + ofToString(level), 40, 60);
     }
     
     void keyPressed(int key) {
@@ -42,6 +47,18 @@ public:
         if(key == 't') {
             bOriginal ^= true;
         }
+        if(key == OF_KEY_LEFT) {
+            level = max(1, level -1);
+        }
+        if(key == OF_KEY_RIGHT) {
+            level = min(10, level + 1);
+        }
+        if(key == OF_KEY_UP) {
+            tree.setThreashold(max(tree.getThreashold() - 0.1f, 4.0f));
+        }
+        if(key == OF_KEY_DOWN) {
+            tree.setThreashold(min(tree.getThreashold() + 0.1f, 64.0f));
+        }
     }
     
 private:
@@ -51,4 +68,6 @@ private:
     bool bWire;
     bool bPlane;
     bool bOriginal;
+    
+    int level;
 };
