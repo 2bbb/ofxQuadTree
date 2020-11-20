@@ -35,25 +35,27 @@ void ofApp::draw() {
 }
 
 void ofApp::keyPressed(int key) {
-    if(key == 'w') {
-        bWire ^= true;
-    }
-    if(key == 'p') {
-        bPlane ^= true;
-    }
-    if(key == 't') {
-        bOriginal ^= true;
-    }
-    if(key == OF_KEY_LEFT) {
-        level = max(1, level -1);
-    }
-    if(key == OF_KEY_RIGHT) {
-        level = min(10, level + 1);
-    }
-    if(key == OF_KEY_UP) {
-        tree.setThreashold(max(tree.getThreashold() - 0.1f, 4.0f));
-    }
-    if(key == OF_KEY_DOWN) {
-        tree.setThreashold(min(tree.getThreashold() + 0.1f, 64.0f));
+    switch(key){
+        case 'w':
+            bWire ^= true;
+            break;
+        case 'p':
+            bPlane ^= true;
+            break;
+        case 't':
+            bOriginal ^= true;
+            break;
+        case OF_KEY_LEFT:
+            level = max(1, level -1);
+            break;
+        case OF_KEY_RIGHT:
+            level = min(10, level + 1);
+            break;
+        case OF_KEY_UP:
+            tree.setThreashold(max(tree.getThreashold() - 0.1f, 4.0f));
+            break;
+        case OF_KEY_DOWN:
+            tree.setThreashold(min(tree.getThreashold() + 0.1f, 64.0f));
+            break;
     }
 }
