@@ -12,7 +12,7 @@ void ofApp::setup() {
 void ofApp::update() {
     grabber.update();
     if(grabber.isFrameNew()) {
-        tree.setTexture(grabber.getTextureReference(), level);
+        tree.setTexture(grabber.getTexture(), level);
     }
 }
 
